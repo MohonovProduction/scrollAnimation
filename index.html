@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mihail Mohonov v2</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+    <!--    <script src="js/scrollmagic/minified/ScrollMagic.min.js"></script>    -->
 </head>
 <body>
     <header class="page-header">
@@ -13,40 +18,77 @@
         <button class="page-header__down-arrow"></button>
     </header>
     <main>
-        <article class="article">
-            <h2 class="article__heading">First article</h2>
-            <p class="article__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur deserunt impedit magni non, tempora voluptate. A ad culpa distinctio dolore et laboriosam natus, nulla rem sapiente soluta voluptas voluptatum.
-                <ul>
+        <section class="my-name">
+            <p class="my-name__name">Mihail Moh&#243;nov</p>
+        </section>
+        <section class="skills">
+            <ul class="skills__list">
+                <li>Front - end</li>
+                <li>UX - design</li>
+            </ul>
+        </section>
+        <section class="section">
+            <article class="article">
+                <h2 class="article__heading">First article</h2>
+                <p class="article__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur deserunt impedit magni non, tempora voluptate. A ad culpa distinctio dolore et laboriosam natus, nulla rem sapiente soluta voluptas voluptatum.
+                <ul class="article__list">
                     <li>In the firs</li>
                     <li>In the second</li>
                     <li>Etc</li>
                 </ul>
-            </p>
-            <p class="article__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur deserunt impedit magni non, tempora voluptate. A ad culpa distinctio dolore et laboriosam natus, nulla rem sapiente soluta voluptas voluptatum.
-            </p>
-        </article>
-        <article class="article">
+                <p class="article__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur deserunt impedit magni non, tempora voluptate. A ad culpa distinctio dolore et laboriosam natus, nulla rem sapiente soluta voluptas voluptatum.
+                </p>
+            </article>
+        </section>
+        <section class="section dark">
+            <article class="article">
+                <h2 class="article__heading">First article</h2>
+                <p class="article__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur deserunt impedit magni non, tempora voluptate. A ad culpa distinctio dolore et laboriosam natus, nulla rem sapiente soluta voluptas voluptatum.
+                </p>
+                <p class="article__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur deserunt impedit magni non, tempora voluptate. A ad culpa distinctio dolore et laboriosam natus, nulla rem sapiente soluta voluptas voluptatum.
+                </p>
+                <blockquote class="article__blockquote">
+                    <p>
+                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+                    </p>
+                </blockquote>
+            </article>
+        </section>
+        <section class="section">
             <h2 class="article__heading">Images</h2>
             <div class="gallery">
                 <img class="gallery_img" alt="placeholder" src="assets/img/placeholder-image.jpg">
                 <img class="gallery_img" alt="placeholder" src="assets/img/placeholder-image.jpg">
                 <img class="gallery_img" alt="placeholder" src="assets/img/placeholder-image.jpg">
             </div>
-        </article>
-        <article class="article">
-            <h2 class="article__heading">First article</h2>
-            <p class="article__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur deserunt impedit magni non, tempora voluptate. A ad culpa distinctio dolore et laboriosam natus, nulla rem sapiente soluta voluptas voluptatum.
-            </p>
-            <p class="article__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur deserunt impedit magni non, tempora voluptate. A ad culpa distinctio dolore et laboriosam natus, nulla rem sapiente soluta voluptas voluptatum.
-            </p>
-        </article>
+        </section>
+        <section class="section dark">
+            <article class="article">
+                <h2 class="article__heading">Contacts</h2>
+                <ul>
+                    <li>Telegram</li>
+                    <li>GitHub</li>
+                </ul>
+            </article>
+        </section>
     </main>
     <footer class="page-footer">
-
+        <h2>End of story</h2>
+        <article>
+            <h3>Contacts</h3>
+            <ul>
+                <li>GitHub</li>
+                <li>Telegram</li>
+            </ul>
+        </article>
+        <article>
+            <h3></h3>
+        </article>
     </footer>
+    <script src="animation.js"></script>
 </body>
 </html>

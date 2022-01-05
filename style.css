@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@294&display=swap');
 
 :root {
-    font-size: 1.5rem;
+    font-size: calc(0.5em + 1vw);
     font-family: 'Readex Pro', sans-serif;
     font-kerning: normal;
-    line-height: 1.5em;
+    line-height: 1.5;
     word-spacing: .1em;
     letter-spacing: -0.04em;
+    --primary-color: hsl(169, 74%, 71%);
 }
 
 * {
     margin: 0;
     padding: 0;
+}
+
+p ~ p {
+    text-indent: 1em;
 }
 
 .page-header {
@@ -29,19 +34,58 @@
     margin-top: 1em;
 }
 
-.article {
+.my-name {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    height: 100vh;
+    background: hsl(0, 0%, 0%);
+}
+.my-name__name {
+    color: hsl(0, 0%, 100%);
+    font-size: 10rem;
+    white-space: nowrap;
+}
+.my-name__name--animated {
+    transform: translateX(-100%);
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.skills__list {
+    list-style: none;
+}
+
+.dark {
+    --color: hsl(0, 0%, 100%);
+    --bg-color: hsl(0, 0%, 0%)
+}
+.section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.6em;
+    padding: 2.6em;
+    color: var(--color);
+    background-color: var(--bg-color);
+}
+.article {
+    max-width: 600px;
+    margin: 5em 0;
 }
 .article__heading {
-    margin-top: 3em;
     margin-bottom: 1em;
 }
 .article__text {
-    margin-bottom: 1em;
-    max-width: 600px;
+
+}
+.article__list {
+
 }
 .gallery {
     display: flex;
@@ -50,7 +94,7 @@
 }
 .gallery_img {
     margin: 1rem;
-    width: 20%;
+    width: calc(20% + 1vw);
     min-width: 250px;
     max-width: 600px;
 }
