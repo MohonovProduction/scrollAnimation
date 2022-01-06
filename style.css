@@ -11,6 +11,8 @@
     letter-spacing: -0.04em;
     --primary-color: hsl(169, 74%, 71%);
     --dark: hsl(188, 45%, 19%);
+    --darken: hsl(188, 100%, 5%);
+    --light: hsl(169, 74%, 90%);
     color: hsl(188, 45%, 19%);
     overflow-x: hidden;
 }
@@ -68,6 +70,33 @@ p ~ p {
     --bg-color: hsl(188, 45%, 19%);
 }
 
+.link::before {
+    content: '';
+    position: absolute;
+    right: -0.6em;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 0.5em;
+    height: 0.5em;
+    border-bottom: 2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
+    transition: 0.3s transform ease-in-out;
+}
+.link:link {
+    position: relative;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.link:visited {
+    color: var(--primary-color);
+}
+.link:hover::before {
+    transform: translateY(-50%) translateX(0.3em) rotate(-45deg);
+}
+.link:active {
+    transform: scale(1.5);
+}
+
 .my-name {
     display: flex;
     flex-direction: column;
@@ -110,7 +139,7 @@ p ~ p {
     margin: 0;
 }
 .skill {
-
+    padding: 2em;
 }
 .skills__title,
 .skill-title {
@@ -183,29 +212,22 @@ p ~ p {
     grid-gap: 1em;
     list-style: none;
 }
-.contact__link::before {
-    content: '';
-    position: absolute;
-    right: -0.6em;
-    top: 50%;
-    transform: translateY(-50%) rotate(-45deg);
-    width: 0.5em;
-    height: 0.5em;
-    border-bottom: 2px solid var(--primary-color);
-    border-right: 2px solid var(--primary-color);
-    transition: 0.3s transform ease-in-out;
-}
-.contact__link:link {
-    position: relative;
-    color: var(--primary-color);
-    text-decoration: none;
-}
-.contact__link:visited {
 
+.page-footer {
+    padding: 5rem 2rem;
+    background-color: var(--darken);
+    color: var(--light);
 }
-.contact__link:hover::before {
-    transform: translateY(-50%) translateX(0.3em) rotate(-45deg);
+.page-footer__wrapper {
+    display: flex;
+    flex-wrap: wrap;
 }
-.contact__link:active {
-    transform: scale(1.5);
+.page-footer__block {
+    margin-right: 4rem;
+}
+.page-footer__title {
+    margin: 3em 0 1em 0;
+}
+.page-footer__list {
+    list-style: none;
 }

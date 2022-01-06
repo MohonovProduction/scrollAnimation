@@ -32,7 +32,7 @@ const skillsTl = new TimelineMax()
 const skillsScene = new ScrollMagic.Scene({
     triggerElement: '.skills',
     triggerHook: 'onLeave',
-    duration: '15000'
+    duration: '10000'
 })
 
 skillsTl.from('#skills__title', 1, { opacity: 0, y: 100 })
