@@ -10,6 +10,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
     <!--    <script src="js/scrollmagic/minified/ScrollMagic.min.js"></script>    -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <!--    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>-->
 </head>
 <body>
     <header class="page-header">
@@ -17,17 +20,37 @@
         <p class="page-header__subtitle">landing about me</p>
         <button class="page-header__down-arrow"></button>
     </header>
-    <main>
-        <section class="my-name">
+    <main id="app">
+        <section class="my-name dark">
+            <h2 class="my-name__title">My name is</h2>
             <p class="my-name__name">Mihail Moh&#243;nov</p>
         </section>
         <section class="skills">
-            <ul class="skills__list">
-                <li>Front - end</li>
-                <li>UX - design</li>
-            </ul>
+            <h2 class="skills__title" id="skills-title">So, what about my skills?</h2>
+            <section class="skill" id="first-skill">
+                <h3 class="skill-title" id="first-skill-title">Front - end</h3>
+                <ul class="skill-list" id="first-skill-list">
+                    <li>
+                        <span class="html5">HTML</span>,
+                        <span class="css3">CSS</span>,
+                        <span class="jsES6">JS</span> ES6
+                    </li>
+                    <li>Node.js NPM</li>
+                    <li>Vue.js</li>
+                </ul>
+
+                </section>
+            <section class="skill" id="skill-backend">
+            </section>
+            <section class="skill" id="second-skill">
+                <h3 class="skill-title" id="second-skill-title">UX/UI</h3>
+                <p id="second-skill-description">
+                    Emotional intelligence and close theory for objective solutions in interface
+                </p>
+                <div class="square dark"></div>
+            </section>
         </section>
-        <section class="section">
+        <section class="section dark">
             <article class="article">
                 <h2 class="article__heading">First article</h2>
                 <p class="article__text">
@@ -42,9 +65,9 @@
                 </p>
             </article>
         </section>
-        <section class="section dark">
+        <section class="section">
             <article class="article">
-                <h2 class="article__heading">First article</h2>
+                <h2 class="article__heading">Second article</h2>
                 <p class="article__text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur deserunt impedit magni non, tempora voluptate. A ad culpa distinctio dolore et laboriosam natus, nulla rem sapiente soluta voluptas voluptatum.
                 </p>
@@ -58,7 +81,7 @@
                 </blockquote>
             </article>
         </section>
-        <section class="section">
+        <section class="section gallery">
             <h2 class="article__heading">Images</h2>
             <div class="gallery">
                 <img class="gallery_img" alt="placeholder" src="assets/img/placeholder-image.jpg">
@@ -66,12 +89,13 @@
                 <img class="gallery_img" alt="placeholder" src="assets/img/placeholder-image.jpg">
             </div>
         </section>
-        <section class="section dark">
+        <section class="section contacts dark">
             <article class="article">
-                <h2 class="article__heading">Contacts</h2>
-                <ul>
-                    <li>Telegram</li>
-                    <li>GitHub</li>
+                <h2 class="article__heading" id="contacts-title">Contacts</h2>
+                <ul class="contacts-list">
+                    <li><a class="contact__link" id="contact1" href="tl.me/mohonovproduction">Telegram</a></li>
+                    <li><a class="contact__link" id="contact2" href="github.io/mohonovproduction">GitHub</a></li>
+                    <li><a class="contact__link" id="contact3" href="mohonovproduction.ru">Website</a></li>
                 </ul>
             </article>
         </section>
