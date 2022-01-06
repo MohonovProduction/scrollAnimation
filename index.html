@@ -16,7 +16,7 @@
 </head>
 <body>
     <header class="page-header">
-        <h1 class="page-header__heading">Mihail Moh&#243;nov</h1>
+        <h1 class="page-header__heading">Moh&#243;nov Production</h1>
         <p class="page-header__subtitle">landing about me</p>
         <button class="page-header__down-arrow"></button>
     </header>
@@ -25,30 +25,37 @@
             <h2 class="my-name__title">My name is</h2>
             <p class="my-name__name">Mihail Moh&#243;nov</p>
         </section>
-        <section class="skills">
-            <h2 class="skills__title" id="skills-title">So, what about my skills?</h2>
-            <section class="skill" id="first-skill">
-                <h3 class="skill-title" id="first-skill-title">Front - end</h3>
-                <ul class="skill-list" id="first-skill-list">
-                    <li>
-                        <span class="html5">HTML</span>,
-                        <span class="css3">CSS</span>,
-                        <span class="jsES6">JS</span> ES6
-                    </li>
-                    <li>Node.js NPM</li>
-                    <li>Vue.js</li>
-                </ul>
+        <section class="section" :class="{ 'skills-wrapped--animated': classList.animated }" id="skills-wrapper">
+            <article class="skills article" :class="{ 'skills--animated': classList.animated }" id="skills">
+                <h2 class="skills__title" id="skills__title">So, what about my skills?</h2>
 
+                <section class="skill" id="skill-front-end">
+                    <h3 class="skill-title" id="skill-front-end__title">Front - end</h3>
+                    <ul class="skill-list" id="skill-front-end__list">
+                        <li><span class="html5">HTML</span> 5</li>
+                        <li><span class="css3">CSS</span> 3</li>
+                        <li><span class="jsES6">JS</span> ES6</li>
+                        <li><span class="vue">Vue.js</span> 3.X</li>
+                    </ul>
                 </section>
-            <section class="skill" id="skill-backend">
-            </section>
-            <section class="skill" id="second-skill">
-                <h3 class="skill-title" id="second-skill-title">UX/UI</h3>
-                <p id="second-skill-description">
-                    Emotional intelligence and close theory for objective solutions in interface
-                </p>
-                <div class="square dark"></div>
-            </section>
+
+                <section class="skill" id="skill-back-end">
+                    <h3 class="skills__title" id="skill-back-end__title">Back - end</h3>
+                    <ul class="skill-list" id="skill-back-end__list">
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>Telegraf.js</li>
+                    </ul>
+                </section>
+
+                <section class="skill" id="skill-uxui-skill">
+                    <h3 class="skill-title" id="skill-uxui__title">UX/UI</h3>
+                    <p id="skill-uxui__description">
+                        Emotional intelligence and close theory for objective solutions in interfaces
+                    </p>
+                </section>
+            </article>
+            <div class="square dark" :class="{ 'square--animated': classList.animated }"></div>
         </section>
         <section class="section dark">
             <article class="article">

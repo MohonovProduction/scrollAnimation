@@ -39,6 +39,28 @@ p ~ p {
     margin-top: 1em;
 }
 
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.6em;
+    color: var(--color);
+    background-color: var(--bg-color);
+}
+.article {
+    max-width: 600px;
+    margin: 5em 0;
+}
+.article__heading {
+    margin-bottom: 1em;
+}
+.article__text {
+
+}
+.article__list {
+
+}
+
 .dark {
     color: hsl(0, 0%, 100%);
     background: hsl(188, 45%, 19%);
@@ -66,13 +88,29 @@ p ~ p {
 .my-name__name--animated {
     transform: translateX(-100vw);
 }
+
 .skills {
     display: grid;
+    grid-gap: 4rem;
+}
+.skills-wrapped--animated {
+    position: relative;
+    display: block;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+.skills--animated {
+    display: grid;
     grid-template-columns: repeat(4, 100vw);
+    grid-gap: 0;
     justify-items: center;
     align-items: center;
-    overflow-x: hidden;
     height: 100vh;
+    margin: 0;
+}
+.skill {
+
 }
 .skills__title,
 .skill-title {
@@ -87,7 +125,8 @@ p ~ p {
 }
 .html5,
 .css3,
-.jsES6 {
+.jsES6,
+.vue {
     font-family: 'Lato', sans-serif;
     padding: 0.2em 0.4em;
     border-radius: 0.3em;
@@ -104,43 +143,22 @@ p ~ p {
     color: hsl(0, 0%, 0%);
     background-color: hsl(51, 100%, 57%);
 }
-.node {
-    color: hsl(119, 37%, 38%);
-}
 .vue {
     font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    background-color: hsl(153, 48%, 65%);
     color: hsl(210, 30%, 22%);
 }
 .square.dark {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 0;
+    right: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
-
-.section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2.6em;
-    color: var(--color);
-    background-color: var(--bg-color);
-}
-.article {
-    max-width: 600px;
-    margin: 5em 0;
-}
-.article__heading {
-    margin-bottom: 1em;
-}
-.article__text {
+.square.square--animated {
 
 }
-.article__list {
 
-}
 .section.gallery {
     min-height: 100vh;
 }

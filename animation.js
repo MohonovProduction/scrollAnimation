@@ -6,11 +6,10 @@ const app = new Vue({
         }
     },
     created() {
-        console.log('hi')
+
     }
 })
 
-/*
 const controller = new ScrollMagic.Controller();
 
 const name = document.querySelector('.my-name__name')
@@ -33,18 +32,30 @@ const skillsTl = new TimelineMax()
 const skillsScene = new ScrollMagic.Scene({
     triggerElement: '.skills',
     triggerHook: 'onLeave',
-    duration: '10000'
+    duration: '15000'
 })
 
-skillsTl.from('#skills-title', 1, { opacity: 0, y: 100 })
-skillsTl.to('.skills', 1, { x: '-100vw' }, '+=2')
-skillsTl.from('#first-skill-title', 1, { opacity: 0, scale: 0 })
-skillsTl.from('#first-skill-list', 1, { opacity: 0, x: 20 })
-skillsTl.to('.skills', 1, { x: '-200vw' }, '+=2')
-skillsTl.from('#second-skill-title', 1, { scale: 10, opacity: 0 })
-skillsTl.from('#second-skill-description', 1, { y: 20, opacity: 0 })
-skillsTl.from('.square', 1, { scale: 0, 'border-radius': '50vh' }, '+=2')
-skillsScene.setPin('.skills')
+skillsTl.from('#skills__title', 1, { opacity: 0, y: 100 })
+
+skillsTl.to('#skills', 1, { x: '-100vw' }, '+=2')
+
+skillsTl.from('#skill-front-end__title', 1, { opacity: 0, scale: 0, delay: 2 })
+skillsTl.from('#skill-front-end__list', 1, { opacity: 0, x: 20, delay: 2 })
+
+skillsTl.to('#skills', 1, { x: '-200vw' }, '+=2')
+
+skillsTl.to('#skills-wrapper', 1, { 'background-color': 'hsl(188, 45%, 19%)', color: 'hsl(188, 0%, 100%)' })
+skillsTl.from('#skill-back-end__title', 1, { opacity: 0, skewX: '90deg' })
+skillsTl.from('#skill-back-end__list', 1, { opacity: 0, x: 20 })
+skillsTl.to('#skill-back-end', 1, { opacity: 0, skewY: '90deg', delay: 2 })
+
+skillsTl.to('#skills', 1, { x: '-300vw' }, '+=2')
+
+skillsTl.to('#skills-wrapper', 1, { 'background-color': 'hsl(188, 0%, 100%)', color: 'hsl(188, 45%, 19%)' })
+skillsTl.from('#skill-uxui__title', 1, { scale: 10, opacity: 0 })
+skillsTl.from('#skill-uxui__description', 1, { y: 20, opacity: 0 })
+skillsTl.from('.square', 1, { opacity: 0 }, '+=2')
+skillsScene.setPin('#skills')
 skillsScene.setTween(skillsTl)
 
 const contactsTl = new TimelineMax()
@@ -64,4 +75,3 @@ contactsScene.setPin('.contacts')
 contactsScene.setTween(contactsTl)
 
 controller.addScene([nameScene, skillsScene, contactsScene])
-*/
