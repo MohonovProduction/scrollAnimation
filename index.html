@@ -57,6 +57,7 @@
             </article>
             <div class="square dark" :class="{ 'square--animated': classList.animated }"></div>
         </section>
+<!--
         <section class="section dark">
             <article class="article">
                 <h2 class="article__heading">First article</h2>
@@ -95,22 +96,28 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur deserunt impedit magni non, tempora voluptate. A ad culpa distinctio dolore et laboriosam natus, nulla rem sapiente soluta voluptas voluptatum.
                 </p>
             </article>
-        </section>
-        <section class="section gallery">
+        </section>-->
+        <section class="section gallery dark">
             <h2 class="article__heading">Images</h2>
             <div class="gallery">
-                <img class="gallery_img" alt="placeholder" src="assets/img/placeholder-image.jpg">
-                <img class="gallery_img" alt="placeholder" src="assets/img/placeholder-image.jpg">
-                <img class="gallery_img" alt="placeholder" src="assets/img/placeholder-image.jpg">
+                <img
+                    v-for="img of gallery.imgs"
+                    class="gallery_img"
+                    :alt="img.alt" :src="img.src"
+                    @click="openImage(img)"
+                >
             </div>
+            <figure v-if="gallery.imgOpen.isOpened" class="gallery_wrapper_big-img" @click="closeImage" :class="{ 'gallery_big-img--opened': gallery.imgOpen.isOpened }">
+                <img class="gallery_big-img" :src="gallery.imgOpen.src" :alt="gallery.imgOpen.alt">
+            </figure>
         </section>
         <section class="section contacts dark">
             <article class="article">
                 <h2 class="article__heading" id="contacts-title">Contacts</h2>
                 <ul class="contacts-list">
-                    <li><a class="link contact__link" id="contact1" href="tl.me/mohonovproduction">Telegram</a></li>
-                    <li><a class="link contact__link" id="contact2" href="github.io/mohonovproduction">GitHub</a></li>
-                    <li><a class="link contact__link" id="contact3" href="mohonovproduction.ru">Website</a></li>
+                    <li><a class="link contact__link" id="contact1" href="https://t.me/mohonovproduction">Telegram</a></li>
+                    <li><a class="link contact__link" id="contact2" href="https://github.com/mohonovproduction">GitHub</a></li>
+                    <li><a class="link contact__link" id="contact3" href="http://mohonovproduction.ru">Website</a></li>
                 </ul>
             </article>
         </section>
